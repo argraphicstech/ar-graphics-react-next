@@ -6,7 +6,7 @@ export default function Navbar() {
       <h2 className="logo-text">AR Rohilla Graphics</h2>
 
       <ul className="nav-links">
-        <li><Link href="/">HOME</Link></li>
+        <li><Link href="/">HOME PAGE</Link></li>
         <li><a href="#about">ABOUT US</a></li>
         <li><Link href="/location">LOCATION</Link></li>
         <li><Link href="/contact">CONTACT US</Link></li>
