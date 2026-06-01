@@ -5,6 +5,10 @@ import Footer from "../components/Footer";
 export const metadata = {
   title: "AR Rohilla Graphics",
   description: "Printing & Digital Services",
+
+  verification: {
+    google: "bD-KB4u7-K-JLOzQJX5piUu7ZjX1ty9ZDvTPNSYfJ5U",
+  },
 };
 
 export default function RootLayout({ children }) {
