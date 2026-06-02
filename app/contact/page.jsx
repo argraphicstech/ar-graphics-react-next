@@ -11,6 +11,22 @@ export default function Contact() {
     e.preventDefault();
 
     try {
+      // Save to Google Sheet
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxPcNmRqM4YfsZfJi6nUbKK1FMtSqskG0r0Wy76Zav8GADSYiIvkdyK_SkFkNpCCip8_Q/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            mobile,
+          }),
+        }
+      );
+
+      // Send Email
       await emailjs.send(
         "service_uaor337",
         "template_69fvobm",
