@@ -7,45 +7,29 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      // Save to Google Sheet
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbxPcNmRqM4YfsZfJi6nUbKK1FMtSqskG0r0Wy76Zav8GADSYiIvkdyK_SkFkNpCCip8_Q/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            mobile,
-          }),
-        }
-      );
+  try {
+    await emailjs.send(
+      "service_uaor337",
+      "template_69fvobm",
+      {
+        name: name,
+        mobile: mobile,
+      },
+      "ZLg6Ge1EiGwesVydm"
+    );
 
-      // Send Email
-      await emailjs.send(
-        "service_uaor337",
-        "template_69fvobm",
-        {
-          name: name,
-          mobile: mobile,
-        },
-        "ZLg6Ge1EiGwesVydm"
-      );
+    alert("Inquiry submitted successfully!");
 
-      alert("Inquiry submitted successfully!");
-
-      setName("");
-      setMobile("");
-    } catch (error) {
-      console.error(error);
-      alert("Failed to send inquiry.");
-    }
-  };
+    setName("");
+    setMobile("");
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send inquiry.");
+  }
+};
 
   return (
     <div className="contact-page">
