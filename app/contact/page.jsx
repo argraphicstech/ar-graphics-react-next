@@ -7,29 +7,46 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    await emailjs.send(
-      "service_uaor337",
-      "template_69fvobm",
-      {
-        name: name,
-        mobile: mobile,
-      },
-      "ZLg6Ge1EiGwesVydm"
-    );
+    try {
+      // Save to Google Sheet
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxPcNmRqM4YfsZfJi6nUbKK1FMtSqskG0r0Wy76Zav8GADSYiIvkdyK_SkFkNpCCip8_Q/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain",
+          },
+          body: JSON.stringify({
+            name,
+            mobile,
+          }),
+        }
+      );
 
-    alert("Inquiry submitted successfully!");
+      // Send Email
+      await emailjs.send(
+        "service_uaor337",
+        "template_69fvobm",
+        {
+          name: name,
+          mobile: mobile,
+        },
+        "ZLg6Ge1EiGwesVydm"
+      );
 
-    setName("");
-    setMobile("");
-  } catch (error) {
-    console.error(error);
-    alert("Failed to send inquiry.");
-  }
-};
+      alert("Inquiry submitted successfully!");
+
+      setName("");
+      setMobile("");
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send inquiry.");
+    }
+  };
 
   return (
     <div className="contact-page">
