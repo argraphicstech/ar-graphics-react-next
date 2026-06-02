@@ -13,12 +13,12 @@ export default function Contact() {
     try {
       // Save to Google Sheet
       await fetch(
-        "https://script.google.com/macros/s/AKfycbxPcNmRqM4YfsZfJi6nUbKK1FMtSqskG0r0Wy76Zav8GADSYiIvkdyK_SkFkNpCCip8_Q/exec",
+        "https://script.google.com/macros/s/AKfycbxUaEy-n9U2fAyg3GuXpFB-Bp79TVZ3bH4VyT8SBkT1IPzM42pqjUFPzPZMfu0YJX7T/exec",
         {
           method: "POST",
           mode: "no-cors",
           headers: {
-            "Content-Type": "text/plain",
+            "Content-Type": "text/plain;charset=utf-8",
           },
           body: JSON.stringify({
             name,
@@ -43,7 +43,7 @@ export default function Contact() {
       setName("");
       setMobile("");
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
       alert("Failed to send inquiry.");
     }
   };
