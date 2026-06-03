@@ -6,7 +6,10 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
+<<<<<<< HEAD
   const [message, setMessage] = useState("");
+=======
+>>>>>>> 633287c6d6369775876cb54fd20cecd105013da2
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,10 +25,16 @@ export default function Contact() {
             "Content-Type": "text/plain;charset=utf-8",
           },
           body: JSON.stringify({
+<<<<<<< HEAD
   name,
   mobile,
   message,
 }),
+=======
+            name,
+            mobile,
+          }),
+>>>>>>> 633287c6d6369775876cb54fd20cecd105013da2
         }
       );
 
@@ -76,6 +85,7 @@ export default function Contact() {
           required
         />
 
+<<<<<<< HEAD
         <textarea
   placeholder="Your Message"
   value={message}
@@ -84,6 +94,8 @@ export default function Contact() {
   required
 />
 
+=======
+>>>>>>> 633287c6d6369775876cb54fd20cecd105013da2
         <button type="submit">Send Inquiry</button>
       </form>
     </div>
