@@ -6,16 +6,8 @@
 }
 
 body{
-  background:linear-gradient(-45deg,#1a0f3c,#3a1c71,#ff4e50,#1a2a6c);
-  background-size:400% 400%;
-  animation:bg 10s ease infinite;
+  background:#000000;
   color:white;
-}
-
-@keyframes bg{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
 }
 
 html{
