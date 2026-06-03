@@ -6,10 +6,7 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
-<<<<<<< HEAD
   const [message, setMessage] = useState("");
-=======
->>>>>>> 633287c6d6369775876cb54fd20cecd105013da2
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,16 +22,10 @@ export default function Contact() {
             "Content-Type": "text/plain;charset=utf-8",
           },
           body: JSON.stringify({
-<<<<<<< HEAD
-  name,
-  mobile,
-  message,
-}),
-=======
             name,
             mobile,
+            message,
           }),
->>>>>>> 633287c6d6369775876cb54fd20cecd105013da2
         }
       );
 
@@ -43,8 +34,9 @@ export default function Contact() {
         "service_uaor337",
         "template_69fvobm",
         {
-          name: name,
-          mobile: mobile,
+          name,
+          mobile,
+          message,
         },
         "ZLg6Ge1EiGwesVydm"
       );
@@ -53,6 +45,7 @@ export default function Contact() {
 
       setName("");
       setMobile("");
+      setMessage("");
     } catch (error) {
       console.error("Error:", error);
       alert("Failed to send inquiry.");
@@ -85,17 +78,14 @@ export default function Contact() {
           required
         />
 
-<<<<<<< HEAD
         <textarea
-  placeholder="Your Message"
-  value={message}
-  onChange={(e) => setMessage(e.target.value)}
-  rows="5"
-  required
-/>
+          placeholder="Your Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          rows="5"
+          required
+        />
 
-=======
->>>>>>> 633287c6d6369775876cb54fd20cecd105013da2
         <button type="submit">Send Inquiry</button>
       </form>
     </div>
