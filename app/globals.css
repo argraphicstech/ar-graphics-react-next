@@ -109,6 +109,30 @@ header{
   margin:5px 0;
 }
 
+/* ABOUT PAGE */
+
+.about-container{
+  padding:50px 20px;
+  text-align:center;
+  background:#000;
+  min-height:100vh;
+}
+
+.about-title{
+  color:#00e5ff;
+  font-size:42px;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+.about-text{
+  max-width:900px;
+  margin:20px auto;
+  line-height:1.8;
+  color:#e5e7eb;
+  font-size:18px;
+}
+
 /* MAP */
 .map{
   margin:20px;
