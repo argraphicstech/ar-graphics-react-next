@@ -1,16 +1,20 @@
 "use client";
 
+// React ka useState import kar rahe hain
 import { useState } from "react";
 
 function ContactForm() {
+  // Form data store karne ke liye state
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
+  // Loading state button ke liye
   const [loading, setLoading] = useState(false);
 
+  // Input field change hone par state update hogi
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -18,12 +22,15 @@ function ContactForm() {
     });
   };
 
+  // Form submit function
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Button ko loading mode me daal do
     setLoading(true);
 
     try {
+      // API ko data bhejna
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -32,27 +39,36 @@ function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+      // API response receive karna
       const data = await response.json();
 
+      // Success message show karna
       alert(data.message);
 
+      // Form clear karna
       setFormData({
         name: "",
         email: "",
         message: "",
       });
+
     } catch (error) {
+      // Error aane par message show karna
       alert("Failed to send inquiry");
       console.error(error);
     }
 
+    // Loading band karna
     setLoading(false);
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      
+      {/* Form Heading */}
       <h2>Contact Us</h2>
 
+      {/* Name Input */}
       <input
         type="text"
         name="name"
@@ -62,6 +78,7 @@ function ContactForm() {
         required
       />
 
+      {/* Email Input */}
       <input
         type="email"
         name="email"
@@ -71,6 +88,7 @@ function ContactForm() {
         required
       />
 
+      {/* Message Box */}
       <textarea
         name="message"
         placeholder="Your Message"
@@ -79,9 +97,14 @@ function ContactForm() {
         required
       />
 
-      <button type="submit" disabled={loading}>
+      {/* Submit Button */}
+      <button
+        type="submit"
+        disabled={loading}
+      >
         {loading ? "Sending..." : "Send Inquiry"}
       </button>
+
     </form>
   );
 }
