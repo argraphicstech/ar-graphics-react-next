@@ -52,10 +52,10 @@ export default function Contact() {
 
   return (
     <div className="contact-page">
-      <h1>Contact Us</h1>
+      <h1 className="contact-title">Contact Us</h1>
 
-      <p>📞 Mobile: 8053440252</p>
-      <p>📧 Email: rohillaaditya50@gmail.com</p>
+<p className="contact-info">📞 Mobile: 8053440252</p>
+<p className="contact-info">📧 Email: rohillaaditya50@gmail.com</p>
 
       <form className="contact" onSubmit={handleSubmit}>
         <label>Name</label>
