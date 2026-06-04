@@ -1,7 +1,7 @@
 export default function Location() {
   return (
     <div className="location-page">
-      <h1>Our Location</h1>
+      <h1 className="location-title">Our Location</h1>
 
       <section className="map">
         <iframe
