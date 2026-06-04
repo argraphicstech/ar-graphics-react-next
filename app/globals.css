@@ -66,9 +66,11 @@ header{
 
 .title{
   text-align:center;
-  font-size:28px;
-  margin:25px;
-  color:#00e5ff;
+  font-size:42px;
+  font-weight:700;
+  margin:35px 0;
+  color:#00E5FF;
+  text-shadow:0 0 15px rgba(0,229,255,0.4);
 }
 
 /* SERVICES */
