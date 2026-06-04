@@ -194,6 +194,20 @@ header{
   text-align:center;
 }
 
+/* Contact Us Heading */
+.contact-title{
+  color:#00e5ff;   /* Cyan */
+  font-size:48px;
+  font-weight:700;
+}
+
+/* Mobile & Email Text */
+.contact-info{
+  color:#0f172a;   /* Dark Blue */
+  font-size:22px;
+  font-weight:600;
+}
+
 /* FOOTER */
 footer{
   padding:20px;
