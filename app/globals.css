@@ -59,8 +59,9 @@ header{
 
 .tagline{
   font-size:18px;
-  color:#ddd;
+  color:black;
   margin-top:10px;
+  font-weight:bold;
 }
 
 .title{
