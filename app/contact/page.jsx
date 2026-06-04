@@ -12,7 +12,6 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      // Save to Google Sheet
       await fetch(
         "https://script.google.com/macros/s/AKfycbxUaEy-n9U2fAyg3GuXpFB-Bp79TVZ3bH4VyT8SBkT1IPzM42pqjUFPzPZMfu0YJX7T/exec",
         {
@@ -29,7 +28,6 @@ export default function Contact() {
         }
       );
 
-      // Send Email
       await emailjs.send(
         "service_uaor337",
         "template_69fvobm",
@@ -60,17 +58,19 @@ export default function Contact() {
       <p>📧 Email: rohillaaditya50@gmail.com</p>
 
       <form className="contact" onSubmit={handleSubmit}>
+        <label>Name</label>
         <input
           type="text"
-          placeholder="Your Name"
+          placeholder="Enter Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
 
+        <label>Mobile Number</label>
         <input
           type="tel"
-          placeholder="Mobile Number"
+          placeholder="Enter Mobile Number"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
           pattern="[0-9]{10}"
@@ -78,8 +78,9 @@ export default function Contact() {
           required
         />
 
+        <label>Your Message</label>
         <textarea
-          placeholder="Your Message"
+          placeholder="Enter Your Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows="5"
