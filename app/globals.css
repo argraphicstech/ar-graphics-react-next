@@ -154,6 +154,19 @@ footer{
 /* MOBILE */
 @media(max-width:768px){
 
+  
+  .about-container{
+    padding:30px 15px;
+  }
+
+  .about-title{
+    font-size:32px;
+  }
+
+  .about-text{
+    font-size:16px;
+  }
+  
   .navbar{
     flex-direction:column;
     padding:15px;
