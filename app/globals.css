@@ -208,6 +208,15 @@ header{
   font-weight:600;
 }
 
+/* Location Page Heading */
+.location-title{
+  color:#000000;      /* Black Color */
+  font-size:48px;
+  font-weight:700;
+  text-align:center;
+  margin-bottom:30px;
+}
+
 /* FOOTER */
 footer{
   padding:20px;
