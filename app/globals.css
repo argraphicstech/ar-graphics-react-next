@@ -135,6 +135,56 @@ header{
   font-weight: bold;
 }
 
+/* CONTACT PAGE MAIN CONTAINER */
+.contact-page{
+  padding:50px 20px;
+  text-align:center;
+}
+
+/* CONTACT FORM */
+.contact{
+  max-width:600px;
+  margin:30px auto;
+  display:flex;
+  flex-direction:column; /* Fields ko ek ke niche ek rakhega */
+  gap:12px; /* Fields ke beech gap */
+}
+
+/* LABELS (Name, Mobile Number, Message) */
+.contact label{
+  text-align:left;
+  font-size:18px;
+  font-weight:700; /* Bold text */
+  color:#000;
+}
+
+/* INPUT BOXES AUR TEXTAREA */
+.contact input,
+.contact textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px;
+}
+
+/* SEND INQUIRY BUTTON */
+.contact button{
+  padding:12px;
+  background:#00e5ff;
+  color:#000;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* BUTTON HOVER EFFECT */
+.contact button:hover{
+  opacity:0.9;
+}
+
 /* MAP */
 .map{
   margin:20px;
