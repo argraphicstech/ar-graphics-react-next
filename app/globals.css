@@ -228,6 +228,17 @@ footer{
   border-radius:20px;
 }
 
+/* Button disabled hone par */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Optional loading effect */
+button {
+  transition: 0.3s;
+}
+
 /* MOBILE */
 @media(max-width:768px){
 
