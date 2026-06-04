@@ -229,6 +229,10 @@ footer{
 /* MOBILE */
 @media(max-width:768px){
 
+  .location-title{
+    font-size:36px;
+  }
+
   
   .about-container{
     padding:30px 15px;
