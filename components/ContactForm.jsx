@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 
 function ContactForm() {
@@ -6,6 +8,8 @@ function ContactForm() {
     email: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -17,22 +21,32 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    setLoading(true);
 
-    const data = await response.json();
-    alert(data.message);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+      const data = await response.json();
+
+      alert(data.message);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      alert("Failed to send inquiry");
+      console.error(error);
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -65,7 +79,9 @@ function ContactForm() {
         required
       />
 
-      <button type="submit">Send Message</button>
+      <button type="submit" disabled={loading}>
+        {loading ? "Sending..." : "Send Inquiry"}
+      </button>
     </form>
   );
 }
