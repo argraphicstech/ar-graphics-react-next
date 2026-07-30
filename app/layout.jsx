@@ -13,27 +13,8 @@ export const metadata = {
   description:
     "AR Graphics provides Printing, Flex Printing, Visiting Cards, Online Forms, Passport Photos, Lamination, PAN Card, Aadhaar Services, Bill Payments, Money Transfer and Digital Services in Bahadurgarh, Haryana.",
 
-  keywords: [
-    "AR Graphics",
-    "Printing Shop Bahadurgarh",
-    "Digital Printing",
-    "Flex Printing",
-    "Visiting Cards",
-    "Passport Photo",
-    "Online Forms",
-    "PAN Card",
-    "Aadhaar Services",
-    "Money Transfer",
-    "Bill Payment",
-    "Lamination",
-    "Color Print",
-    "Black and White Print",
-    "CSC Center",
-    "Graphics Design",
-    "Bahadurgarh",
-    "Jhajjar",
-    "Haryana",
-  ],
+  keywords:
+    "AR Graphics, Printing Shop Bahadurgarh, Digital Printing, Flex Printing, Visiting Cards, Passport Photo, Online Forms, PAN Card, Aadhaar Services, Money Transfer, Bill Payment, Lamination, Color Print, Black and White Print, CSC Center, Graphics Design, Bahadurgarh, Jhajjar, Haryana",
 
   alternates: {
     canonical: "https://www.arrohillagraphics.com",
@@ -47,6 +28,13 @@ export const metadata = {
     siteName: "AR Graphics",
     locale: "en_IN",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "AR Graphics | Printing & Digital Services",
+    description:
+      "Printing, Flex Printing, Visiting Cards, Online Forms, Passport Photos and Digital Services in Bahadurgarh.",
   },
 
   robots: {
@@ -113,9 +101,7 @@ export default function RootLayout({ children }) {
         />
 
         <Navbar />
-
         {children}
-
         <Footer />
       </body>
     </html>
