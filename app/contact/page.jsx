@@ -55,7 +55,7 @@ export default function Contact() {
       <h1 className="contact-title">Contact Us</h1>
 
 <p className="contact-info">📞 Mobile: 8053440252</p>
-<p className="contact-info">📧 Email: rohillaaditya50@gmail.com</p>
+<p className="contact-info">📧 Email: argraphicstech@gmail.com</p>
 
       <form className="contact" onSubmit={handleSubmit}>
         <label>Name</label>
