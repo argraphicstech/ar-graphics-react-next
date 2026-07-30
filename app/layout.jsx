@@ -6,9 +6,9 @@ export const metadata = {
   title: "AR Graphics",
   description: "Printing & Digital Services",
 
-  verification: {
-    google: "bD-KB4u7-K-JLOzQJX5piUu7ZjX1ty9ZDvTPNSYfJ5U",
-  },
+verification: {
+  google: "38Z4eyN7wuzuGiXv2jG7RxS7_TfQK2Ex4rHDuW-StKo",
+},
 };
 
 export default function RootLayout({ children }) {
