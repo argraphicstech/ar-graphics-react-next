@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo-text">AR Rohilla Graphics</h2>
+      <h2 className="logo-text">AR Graphics</h2>
 
       <ul className="nav-links">
         <li><Link href="/">HOME PAGE</Link></li>
