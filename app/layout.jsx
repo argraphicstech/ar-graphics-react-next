@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "AR Rohilla Graphics",
+  title: "AR Graphics",
   description: "Printing & Digital Services",
 
   verification: {
