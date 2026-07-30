@@ -4,7 +4,7 @@ export default function About() {
       <h1 className="about-title">About Us</h1>
 
       <p className="about-text">
-        AR Rohilla Graphics is your trusted destination for Printing,
+        AR Graphics is your trusted destination for Printing,
         Designing, Online Form Filling, Visiting Cards, Flex Printing,
         Lamination, and various Digital Services.
       </p>
